@@ -12,6 +12,31 @@
     --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+body.light-theme {
+    --bg-color: #f5f5f5;
+    --text-color: #222222;
+    --text-muted: #666666;
+    --primary-color: #007aff;
+    --secondary-color: #6366f1;
+    --accent-color: #ff2d55;
+    --glass-bg: rgba(0, 0, 0, 0.05);
+    --glass-border: rgba(0, 0, 0, 0.1);
+}
+
+.theme-toggle-btn {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: 16px;
+    transition: var(--transition);
+}
+body.light-theme .theme-toggle-btn {
+    color: #222;
+}
+}
+
 * {
     margin: 0;
     padding: 0;

@@ -1,4 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
+        // Theme toggle
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        themeToggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('light-theme');
+            // Change icon
+            if (document.body.classList.contains('light-theme')) {
+                themeToggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
+            } else {
+                themeToggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
+            }
+        });
+        // Set initial icon
+        if (document.body.classList.contains('light-theme')) {
+            themeToggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+            themeToggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
+        }
     // Reveal animations on load
     const reveals = document.querySelectorAll('.reveal-text');
     
